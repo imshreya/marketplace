@@ -1,0 +1,26 @@
+There are following commands you can use to build the project.
+	1. if you are using any IDE than please use the mvn clean and mvn install and get the marketplace.jar from the target folder
+	2. you can use the following command as well. mvn clean install -DskipTests -q assembly:single
+	
+To run the project:
+	1. this implemetation only consider the 1 command line argument
+	2. in the command line argument please provide the full path to the input file. e.g. C:\Users\Shreya\Desktop\input.txt
+	3. to run execute the jar please run the following command.
+	     java -jar marketplace.jar C:\Users\Shreya\Desktop\input.txt
+	
+Assumptions
+1. Repayments will be paid every month as EMIs until the total amount is recovered.
+2. Lump sum amounts can be paid at any point of time before the end of tenure.
+3. The EMI amount will be always ceiled to the nearest integer. For example 86.676767 can be ceiled to 87 and 100.10 to 101.
+4. The no of EMIs should be ceiled to the nearest whole number. For example 23.79 will be ceiled to 24 and 23.1 will also be ceiled to 24.
+5. If the last EMI is more than the remaining amount to pay, then it should be adjusted to match the amount remaining to pay.
+	 E.g. if the remaining amount to pay is 150 and your EMI is 160, then the last EMI amount paid should be 150.
+6. The total amount remaining at any EMI number should always include the EMIs paid and lump sum payments until that number. 
+	For example if there was a lump sum payment after EMI number 10, then the balance command for EMI number 10 should include the lump sum payment as well.
+	
+Assumptions made on implementation
+1. one borrower cannot get multiple loan from a single bank	
+2.
+	
+	
+	
